@@ -24,7 +24,13 @@ struct ContentView: View {
             }
             
             // Bottom
-            Rectangle()
+            VStack {
+                Rectangle()
+                HStack {
+                    Rectangle()
+                    Rectangle()
+                }
+            }
         }
         .padding()
     }
