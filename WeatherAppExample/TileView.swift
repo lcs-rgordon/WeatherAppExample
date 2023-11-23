@@ -20,6 +20,7 @@ struct TileView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text("Feels like")
+                        .foregroundStyle(.gray)
                     Spacer()
                 }
                 Text("2°")

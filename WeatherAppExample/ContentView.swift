@@ -19,12 +19,12 @@ struct ContentView: View {
             // Top
             HStack {
                 VStack {
-                    Rectangle()
-                    Rectangle()
+                    TileView()
+                    TileView()
                 }
                 VStack {
-                    Rectangle()
-                    Rectangle()
+                    TileView()
+                    TileView()
                 }
             }
             
