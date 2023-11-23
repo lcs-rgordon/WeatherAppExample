@@ -11,6 +11,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
+            Text("Smith-Ennismore-Lakefield")
+                .font(.title)
+            Text("6° | Cloudy")
+                .font(.title2)
+
             // Top
             HStack {
                 VStack {
