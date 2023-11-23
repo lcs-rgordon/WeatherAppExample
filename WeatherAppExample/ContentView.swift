@@ -20,11 +20,13 @@ struct ContentView: View {
             HStack {
                 VStack {
                     TileView(
+                        symbolName: "thermometer.low",
                         category: "Feels like",
                         dataToShow: "2°",
                         description: "Wind is making it fel colder."
                     )
                     TileView(
+                        symbolName: "drop.fill",
                         category: "Precipitation",
                         dataToShow: "0 mm",
                         description: "Next expected is 48 mm snow Sun."
@@ -32,11 +34,13 @@ struct ContentView: View {
                 }
                 VStack {
                     TileView(
+                        symbolName: "eye",
                         category: "Visibility",
                         dataToShow: "29 km",
                         description: "Perfectly clear view"
                     )
                     TileView(
+                        symbolName: "water.waves",
                         category: "Humidity",
                         dataToShow: "78%",
                         description: "The dew point is 2° right now."

@@ -10,6 +10,7 @@ import SwiftUI
 struct TileView: View {
     
     // MARK: Stored properties
+    let symbolName: String
     let category: String
     let dataToShow: String
     let description: String
@@ -26,8 +27,11 @@ struct TileView: View {
             // Foreground layer
             VStack(alignment: .leading) {
                 HStack {
-                    Text(category)
-                        .foregroundStyle(.gray)
+                    HStack {
+                        Image(systemName: symbolName)
+                        Text(category)
+                    }
+                    .foregroundStyle(.gray)
                     Spacer()
                 }
                 Text(dataToShow)
@@ -45,6 +49,7 @@ struct TileView: View {
 
 #Preview {
     TileView(
+        symbolName: "drop.fill",
         category: "Visibility",
         dataToShow: "29 km",
         description: "Perfectly clear view."
