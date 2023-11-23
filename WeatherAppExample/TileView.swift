@@ -9,9 +9,28 @@ import SwiftUI
 
 struct TileView: View {
     var body: some View {
-        Rectangle()
-            .fill(Color("DarkGrey"))
-            .cornerRadius(15.0)
+        ZStack {
+            
+            // Background layer
+            Rectangle()
+                .fill(Color("DarkGrey"))
+                .cornerRadius(15.0)
+            
+            // Foreground layer
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Feels like")
+                    Spacer()
+                }
+                Text("2°")
+                    .font(.largeTitle)
+                Spacer()
+                Text("Wind is making it feel colder.")
+            }
+            .padding()
+            .foregroundStyle(Color.white)
+
+        }
         
     }
 }
