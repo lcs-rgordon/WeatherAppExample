@@ -19,12 +19,28 @@ struct ContentView: View {
             // Top
             HStack {
                 VStack {
-                    TileView()
-                    TileView()
+                    TileView(
+                        category: "Feels like",
+                        dataToShow: "2°",
+                        description: "Wind is making it fel colder."
+                    )
+                    TileView(
+                        category: "Precipitation",
+                        dataToShow: "0 mm",
+                        description: "Next expected is 48 mm snow Sun."
+                    )
                 }
                 VStack {
-                    TileView()
-                    TileView()
+                    TileView(
+                        category: "Visibility",
+                        dataToShow: "29 km",
+                        description: "Perfectly clear view"
+                    )
+                    TileView(
+                        category: "Humidity",
+                        dataToShow: "78%",
+                        description: "The dew point is 2° right now."
+                    )
                 }
             }
             

@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct TileView: View {
+    
+    // MARK: Stored properties
+    let category: String
+    let dataToShow: String
+    let description: String
+    
+    // MARK: Computed property
     var body: some View {
         ZStack {
             
@@ -19,14 +26,14 @@ struct TileView: View {
             // Foreground layer
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Feels like")
+                    Text(category)
                         .foregroundStyle(.gray)
                     Spacer()
                 }
-                Text("2°")
+                Text(dataToShow)
                     .font(.largeTitle)
                 Spacer()
-                Text("Wind is making it feel colder.")
+                Text(description)
             }
             .padding()
             .foregroundStyle(Color.white)
@@ -37,6 +44,10 @@ struct TileView: View {
 }
 
 #Preview {
-    TileView()
+    TileView(
+        category: "Visibility",
+        dataToShow: "29 km",
+        description: "Perfectly clear view."
+    )
         .frame(width: 200, height: 200)
 }
